@@ -1,6 +1,6 @@
 from pygtail import Pygtail
 
-filename = 'com.plexapp.system.log'
+filename = 'Plex Media Server.log'
 
 while(True):
     for line in Pygtail(filename):
