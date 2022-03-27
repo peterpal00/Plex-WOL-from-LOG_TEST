@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Plex-WOL-from-LOG", "Plex-WOL-from-LOG\Plex-WOL-from-LOG.pyproj", "{8668C9FB-6ED6-4865-B7B2-9A19D6E7F4B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8668C9FB-6ED6-4865-B7B2-9A19D6E7F4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8668C9FB-6ED6-4865-B7B2-9A19D6E7F4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63809547-6CDA-45C3-A9B5-95597E328D61}
+	EndGlobalSection
+EndGlobal
