@@ -26,7 +26,7 @@
     <Compile Include="user.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="test19.txt" />
+    <Content Include="test20.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
