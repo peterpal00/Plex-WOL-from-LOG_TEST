@@ -10,9 +10,8 @@ active_users = list()
 analyser = LogAnalyser(active_users)
 
 while(True):
-    print('before log read')
     for line in Pygtail(filee):
         analyser.check_for_new_user(line)
-        print('newline')
-    print('hello')
+        print(line)
+    print('sleep')
     sleep(2)
