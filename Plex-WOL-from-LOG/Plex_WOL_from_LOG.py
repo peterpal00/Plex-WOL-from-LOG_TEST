@@ -1,5 +1,6 @@
 from pygtail import Pygtail
 from log_analyser import LogAnalyser
+from time import sleep
 
 filename = 'Plex Media Server.log'
 filepath = '/path/to/library/Library/Application Support/Plex Media Server/Logs/'
