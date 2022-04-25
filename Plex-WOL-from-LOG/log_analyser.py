@@ -8,16 +8,14 @@ class LogAnalyser:
         self.target_ip_address = '192.168.0.11'
         self.mac_address = '18:C0:4D:34:63:A8'
         self.active_users = active_users
-        self.request_regex = '^Request:'
-        self.connection_closed_regex = '^Completed after connection close'
+        self.request_regex = 'Request:'
+        self.connection_closed_regex = 'Completed after connection close'
         self.ip_address_regex = '\[([0-9]+(\.[0-9]+)+).*\]'
         self.id_regex = '\[.*(\d{5}).*\].*?GET'
         self.username_regex = 'Token.(\((.*?)\))'
 
     def check_for_new_user(self,line):
-        print('check line for new user')
         if self._check_if_request(line):
-            print('its a REQUEST')
             address = re.search(self.ip_address_regex, line)
             iD = re.search(self.id_regex, line)
             name = re.search(self.username_regex, line)
@@ -26,7 +24,6 @@ class LogAnalyser:
             self._add_user_function(new_user)
 
         elif self._check_if_connection_close(line):
-            print('its a CONNECTION CLOSE')
             address = re.search(self.ip_address_regex, line)
             iD = re.search(self.id_regex, line)
             user_to_remove = User(address.group(1), iD.group(1), None)

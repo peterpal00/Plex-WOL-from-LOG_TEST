@@ -12,6 +12,4 @@ analyser = LogAnalyser(active_users)
 while(True):
     for line in Pygtail(filee):
         analyser.check_for_new_user(line)
-        print(line)
-    print('sleep')
     sleep(2)
