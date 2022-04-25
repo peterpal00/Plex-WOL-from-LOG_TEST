@@ -2,7 +2,7 @@ from pygtail import Pygtail
 from log_analyser import LogAnalyser
 
 filename = 'Plex Media Server.log'
-filepath = '/path/to/library/Application Support/Plex Media Server/Logs/'
+filepath = '/path/to/library/Library/Application Support/Plex Media Server/Logs/'
 filee = filepath + filename
 active_users = list()
 #testfile = 'test19.txt'
