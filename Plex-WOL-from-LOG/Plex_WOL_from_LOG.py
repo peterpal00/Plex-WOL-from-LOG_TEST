@@ -4,13 +4,14 @@ from time import sleep
 
 filename = 'Plex Media Server.log'
 filepath = '/path/to/library/Library/Application Support/Plex Media Server/Logs/'
-#filee = filepath + filename
+filee = filepath + filename
 active_users = list()
-testfile = 'test20.txt'
+#testfile = 'test20.txt'
 analyser = LogAnalyser(active_users)
 
 while(True):
-    for line in Pygtail(testfile):
+    print('before log read')
+    for line in Pygtail(filee):
         analyser.check_for_new_user(line)
         print('newline')
     print('hello')
