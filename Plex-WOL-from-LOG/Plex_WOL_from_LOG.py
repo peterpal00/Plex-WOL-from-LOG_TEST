@@ -5,11 +5,12 @@ from time import sleep
 filename = 'Plex Media Server.log'
 filepath = '/path/to/library/Library/Application Support/Plex Media Server/Logs/'
 filee = filepath + filename
-active_users = list()
-#testfile = 'test20.txt'
+active_users = dict()
+testfile = 'test26.txt'
 analyser = LogAnalyser(active_users)
 
 while(True):
-    for line in Pygtail(filee):
+    for line in Pygtail(testfile):
+        print(line)
         analyser.check_for_new_user(line)
     sleep(2)
