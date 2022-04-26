@@ -1,3 +1,4 @@
+import os
 import re
 from user import User
 from ping3 import ping
@@ -5,8 +6,9 @@ from wakeonlan import send_magic_packet
 
 class LogAnalyser:
     def __init__(self, active_users: list) -> None:
-        self.target_ip_address = '192.168.0.11'
-        self.mac_address = '18:C0:4D:34:63:A8'
+        self.target_ip_address = os.environ['IP_ADDRESS']
+        self.mac_address = os.environ['MAC_ADDRESS']
+        
         self.active_users = active_users
         self.request_regex = 'Request:'
         self.GET_regex = 'GET'
