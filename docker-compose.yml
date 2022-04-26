@@ -25,7 +25,7 @@ services:
 
   plexwolfromlog:
     container_name: plexwolfromlog
-    # image: #plexwolfromlog
+    image: peterpal00/plexwolfromlog:base
     environment:
       - LOG_FILE_NAME=Plex Media Server.log
       - PLEX_PATH=${PLEX_CONFIG_PATH}
