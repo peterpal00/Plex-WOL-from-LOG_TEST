@@ -21,7 +21,7 @@ class LogAnalyser:
             iD = re.search(self.id_regex, line)
             name = re.search(self.username_regex, line)
 
-            if name and iD:
+            if name and iD and address:
                 new_user = User(address.group(1), iD.group(1), name.group(2))
                 self._add_user_function(new_user)
 
