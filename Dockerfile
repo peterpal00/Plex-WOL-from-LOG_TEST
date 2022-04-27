@@ -5,9 +5,9 @@ FROM python:3.9.12-slim
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 
-ENV LOG_FILE_NAME=${LOG_FILE_NAME}
 ENV PLEX_PATH=${PLEX_PATH}
 ENV PART_OF_LOG_PATH=${PART_OF_LOG_PATH}
+ENV LOG_FILE_NAME=${LOG_FILE_NAME}
 ENV MAC_ADDRESS=${MAC_ADDRES}
 ENV IP_ADDRESS=${IP_ADDRES}
 
@@ -25,6 +25,8 @@ COPY . /app
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
 RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
 USER appuser
+
+VOLUME /logfile
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 ENTRYPOINT [ "python", "Plex-WOL-from-LOG/Plex_WOL_from_LOG.py" ]
