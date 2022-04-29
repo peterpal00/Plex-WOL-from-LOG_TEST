@@ -25,13 +25,13 @@ services:
 
   plexwolfromlog:
     container_name: plexwolfromlog
-    # image: null #peterpal00/plexwolfromlog:base
+    image: peterpal00/plexwolfromlog:base
     environment:
       - PLEX_PATH=${PLEX_CONFIG_PATH}
       - PART_OF_LOG_PATH=Library/Application Support/Plex Media Server/Logs/
       - LOG_FILE_NAME=Plex Media Server.log
-      - MAC_ADDRESS=18:C0:4D:34:63:A8
-      - IP_ADDRES=192.168.0.11
+      - MAC_ADDRESS={YOUR_PLEX_SERVER_MAC_ADDRESS}
+      - IP_ADDRES={YOUR_PLEX_SERVER_IP_ADDRESS}
     volumes:
       - ${PLEX_CONFIG_PATH}:/logfile
     depends_on:
